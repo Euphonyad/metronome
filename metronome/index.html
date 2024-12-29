@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Metronome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- The Counter Area in the Center -->
+    <div id="counter" class="centered">
+      <div class="measure-beat-container">
+        <div id="measure" class="counter-side">1</div> <!-- Measure -->
+        <div class="divider"></div> <!-- Divider -->
+        <div id="beat" class="counter-side">1</div> <!-- Beat -->
+      </div>
+    </div>
+
+    <!-- Input Controls Area at the Bottom (Always Visible) -->
+    <div id="inputs-container">
+      <div class="inputs">
+        <label for="tempo">Tempo (BPM):</label>
+        <input type="number" id="tempo" value="120" min="40" max="200">
+        
+        <label for="measures">Number of Measures:</label>
+        <input type="number" id="measures" value="4" min="1" max="16">
+        
+        <label for="time-signature">Time Signature (Beats/Measure):</label>
+        <input type="number" id="time-signature" value="4" min="1" max="12">
+      </div>
+    </div>
+
+    <button id="start-stop">Start</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
